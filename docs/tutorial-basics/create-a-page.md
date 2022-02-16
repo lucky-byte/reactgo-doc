@@ -2,42 +2,68 @@
 sidebar_position: 1
 ---
 
-# Create a Page
+# 页面套路
 
-Add **Markdown or React** files to `src/pages` to create a **standalone page**:
+在代码中有一个示例页面 `src/demo` 用来演示页面的各种套路，你可以参考它的写法，
+用它作为你的新页面的起点是不错的选择（复制粘贴）。
 
-- `src/pages/index.js` -> `localhost:3000/`
-- `src/pages/foo.md` -> `localhost:3000/foo`
-- `src/pages/foo/bar.js` -> `localhost:3000/foo/bar`
+## 页面固定部分
 
-## Create your first React Page
+ReactGO 的侧边菜单栏和页面工作区顶部的标题栏是全局存在的，这是套路，不要试图去改变或删除它们，
+如果你对这些不满意，那可能不适合使用 ReactGO。
 
-Create a file at `src/pages/my-react-page.js`:
+## 每个页面一个 `main`
 
-```jsx title="src/pages/my-react-page.js"
-import React from 'react';
-import Layout from '@theme/Layout';
+除去页面固定部分后，剩下的工作区域是你的战场，你应该把这块区域标记为 `main`，一般的写法是：
 
-export default function MyReactPage() {
+```jsx
+<Container as='main' role='main' maxWidth='md'>
+  ...
+</Container>
+```
+
+## 每个页面一个标题
+
+标题贯穿几个地方，包括浏览器的标签页、工作区标题栏中的标题，要正确设置标题，应该使用下面的套路：
+
+```jsx
+import { useSetRecoilState } from "recoil";
+import titleState from "~/state/title";
+
+export default function XXX() {
+  const setTitle = useSetRecoilState(titleState);
+
+  // highlight-next-line
+  useEffect(() => { setTitle('这里是标题'); }, [setTitle]);
+
   return (
-    <Layout>
-      <h1>My React page</h1>
-      <p>This is a React page</p>
-    </Layout>
-  );
+    ...
+  )
 }
 ```
 
-A new page is now available at `http://localhost:3000/my-react-page`.
+## 父子页面规划
 
-## Create your first Markdown Page
+业务中有许多针对某个实体进行增删查改的操作，对于这样的情况，ReactGO
+的套路是使用表格作为主（父）页面（一个表格列出所有的实体），
+然后表格每条记录后面有一个菜单进入子页面（例如修改页面），这样父子页面关系就确定了，
+在设计 url 时也应遵循此套路，可以参考 *系统用户管理* 页面。
 
-Create a file at `src/pages/my-markdown-page.md`:
+### 子页面 ESC 快捷键
 
-```mdx title="src/pages/my-markdown-page.md"
-# My Markdown page
+对于很多用户，习惯按下 `ESC` 取消当前的操作，因此在子页面中，我们应该支持这个快捷键，
+按下 ESC 时返回到父页面，下面是套路代码。
 
-This is a Markdown page
+```jsx
+import { useNavigate } from 'react-router-dom';
+import { useHotkeys } from 'react-hotkeys-hook';
+
+export default function XXX() {
+  const navigate = useNavigate();
+
+  // highlight-next-line
+  useHotkeys('esc', () => { navigate('..'); }, { enableOnTags: ["INPUT"] });
+
+  ...
+}
 ```
-
-A new page is now available at `http://localhost:3000/my-markdown-page`.
