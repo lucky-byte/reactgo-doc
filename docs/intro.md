@@ -14,14 +14,16 @@ sidebar_position: 1
 ### 创建新仓库
 
 打开 [ReactGo 模板仓库](https://github.com/lucky-byte/reactgo)，
-   在页面中找到 `Use this template` 绿色按钮，点击它（懒得找直接点
-   [这里](https://github.com/lucky-byte/reactgo/generate) 也行），
-   将开始创建一个新的仓库，按照页面的提示创建仓库，完成后 clone 到你的开发机。
+在页面中找到 `Use this template` 绿色按钮，点击它（懒得找直接点
+[这里](https://github.com/lucky-byte/reactgo/generate) 也行），
+将开始创建一个新的仓库，按照页面的提示创建仓库，完成后 clone 到你的开发机。
 
 ### 启动前端
+
 开一个终端窗口，进入仓库 `web` 目录，运行 `yarn` 安装 npm 模块，
-   然后运行 `yarn build` 构建，完了运行 `yarn start` 启动前端开发服务器，
-   一共要运行 3 个命令。
+然后运行 `yarn build` 构建，完了运行 `yarn start` 启动前端开发服务器，
+会在浏览器打开登录页面。
+一共要运行 3 个命令。
 
 ### 启动后端
 
@@ -31,7 +33,7 @@ sidebar_position: 1
 运行 `make` ，完了运行 `./reactgo -adduser -config .config/config.yaml`，
 按照提示添加一个后台用户（**注意会在终端打印一个随机密码**，登录需要）。
 
-运行 `make dev` 启动后台服务，使用刚刚创建的用户登录。
+运行 `make dev` 启动后台服务，然后转到浏览器，使用刚刚创建的用户登录。
 
 ### 遇到问题
 
