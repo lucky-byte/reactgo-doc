@@ -13,7 +13,8 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.png',
   organizationName: 'lucky-byte',
-  projectName: 'reactgo',
+  projectName: 'reactgo-doc',
+  trailingSlash: false,
 
   presets: [
     [
