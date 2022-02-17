@@ -1,0 +1,36 @@
+# 操作确认
+
+经常会遇到需要用户确认的情况，例如删除某个资源需要用户确认一下，之类的。
+
+ReactGO 的操作确认用法如下:
+
+```jsx
+import { useConfirm } from 'material-ui-confirm';
+
+const confirm = useConfirm();
+
+try {
+  // highlight-start
+  await confirm({
+    description: '确定要干这事吗？',                    // 提示文字
+    confirmationText: '确定',                         // 确认按钮的文字
+    confirmationButtonProps: { color: 'warning' },   // 确认按钮的外观
+    contentProps: { p: 8 },                          // 窗体风格
+  });
+  // highlight-end
+
+  // 如果用户点击了确认，才会执行这里的代码
+  doSomeThing();
+} catch (err) {
+  if (err) {
+    enqueueSnackbar(err.message);
+  }
+}
+```
+
+注意 `confirm()` 返回一个 `promise`，你需要 `await`，不然就起不到确认的效果了。
+
+还有一个需要注意的地方，就是在 `catch` 子句中，需要判断 `err` 是否有值，
+因为用户放弃，是一个 reject 操作，所以会执行 catch 子句，但不是错误，所以 err 没有值。
+
+可以查阅 `material-ui-confirm` 文档解锁更多功能。
