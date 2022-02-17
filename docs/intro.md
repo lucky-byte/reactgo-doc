@@ -18,16 +18,27 @@ sidebar_position: 1
 [这里](https://github.com/lucky-byte/reactgo/generate) 也行），
 将开始创建一个新的仓库，按照页面的提示创建仓库，完成后 clone 到你的开发机。
 
+### 初始化数据库
+
+ReactGO 支持 `sqlite`, `MySQL`, 以及 `PostgreSQL`。这里以 Sqlite 为例，
+打开一个终端窗口，进入 `migrate` 子目录，运行 `./migrate-sqlite.sh` 初始化数据库，
+数据库文件为 `/tmp/reactgo.sqlite`。
+
+:::tip 修改数据库文件
+默认在 `/tmp` 下创建数据库文件，你可以打开 `migrate-sqlite.sh` 进行修改，如果修改，
+需要注意也要修改 `config.yaml` 配置文件中的数据库配置参数。
+:::
+
 ### 启动前端
 
-开一个终端窗口，进入仓库 `web` 目录，运行 `yarn` 安装 npm 模块，
+开一个终端窗口，进入仓库 `web` 子目录，运行 `yarn` 安装 npm 模块，
 然后运行 `yarn build` 构建，完了运行 `yarn start` 启动前端开发服务器，
 会在浏览器打开登录页面。
 一共要运行 3 个命令。
 
 ### 启动后端
 
-另开一个终端窗口，进入仓库 `serve` 目录，创建一个 `.config` 目录用于存放开发配置文件
+另开一个终端窗口，进入仓库 `serve` 子目录，创建一个 `.config` 目录用于存放开发配置文件
 (.config 中的文件不会提交到仓库)，运行 `cp config.yaml .config/yaml` 复制一份配置文件。
 
 运行 `make` ，完了运行 `./reactgo -adduser -config .config/config.yaml`，
