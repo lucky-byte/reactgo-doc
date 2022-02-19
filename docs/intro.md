@@ -41,6 +41,8 @@ ReactGO 支持 `sqlite`, `MySQL`, 以及 `PostgreSQL`。这里以 Sqlite 为例�
 另开一个终端窗口，进入仓库 `serve` 子目录，创建一个 `.config` 目录用于存放开发配置文件
 (.config 中的文件不会提交到仓库)，运行 `cp config.yaml .config/yaml` 复制一份配置文件。
 
+运行 `make html` 生成默认的`隐私政策`和`服务条款`文件（这两个文件可以定制，暂时不理会）。
+
 运行 `make` ，完了运行 `./reactgo -adduser -config .config/config.yaml`，
 按照提示添加一个后台用户（**注意会在终端打印一个随机密码**，登录需要）。
 
