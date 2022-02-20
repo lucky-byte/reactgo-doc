@@ -40,7 +40,7 @@ const config = {
       title: 'ReactGo',
       logo: { alt: 'Logo', src: 'img/logo.png' },
       items: [
-        { type: 'doc', docId: 'intro', position: 'left', label: '指南', },
+        { type: 'doc', docId: 'intro', position: 'left', label: '快速上手', },
         { to: '/blog', label: '博客', position: 'left' },
         {
           href: 'https://github.com/lucky-byte/reactgo',
@@ -53,10 +53,10 @@ const config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: '文档',
           items: [
             {
-              label: '指南', to: '/docs/intro',
+              label: '快速上手', to: '/docs/intro',
             },
           ],
         },
