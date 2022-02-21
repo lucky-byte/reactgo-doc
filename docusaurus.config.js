@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 const config = {
   title: 'React + Go',
-  tagline: '基础功能开箱即用，快速交付业务系统',
+  tagline: '面向快速交付，提高生产效率',
   url: 'https://reactgo.headless.pub',
   baseUrl: '/',
   onBrokenLinks: 'throw',

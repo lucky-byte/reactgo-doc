@@ -25,11 +25,11 @@ function HomepageHeader() {
               </Link>
             </div>
             <p className={clsx('margin-top--xl', styles.secondary)}>
-              如果你喜欢 ReactGO，请打开
+              如果你觉得 ReactGO 还不错，请打开
               <Link href='https://github.com/lucky-byte/reactgo' target='_blank'>
                 项目主页
               </Link>
-              点一下 Star!
+              给一个 Star &#127775;
             </p>
           </div>
           <div class="col col--7">

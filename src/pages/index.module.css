@@ -23,11 +23,11 @@
 }
 
 p.secondary {
-  color: #840;
+  color: #ff0;
   font-size: 0.9rem;
 }
 
 p.secondary a {
-  color: #820;
+  color: #ff0;
   text-decoration: underline;
 }
