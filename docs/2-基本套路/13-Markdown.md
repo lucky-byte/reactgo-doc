@@ -12,24 +12,69 @@
 ```jsx
 import Markdown from '~/comp/markdown';
 
-<Markdown>
-{`
+function X() {
+  return (
+    <Markdown>
+      {`
 # 欢迎...
 
 欢迎使用 ReactGo，前后端分离的基础开发平台，ReactGo 前端采用 React 技术开发，
 后端采用 Go 语言开发。
 
-ReactGo 提供许多开箱即用的基础功能，用于快速交付业务系统，
-这也是 ReactGo 的主要目标。
+ReactGo 提供许多开箱即用的基础功能，用于快速交付业务系统，这也是 ReactGo 的主要目标。
 
 ---
 
 想了解更多？请在 [这里](https://reactgo.kross.work) 查看开发文档。
 `}
-</Markdown>
+    </Markdown>
+  )
+}
 ```
 
-在 Markdown 组件中的内容需要用 `{``}` 包裹起来，这很不好，如果内容来自于外部，
-比如网络响应的数据，那没有问题，如果自己写固定的内容，用这种包裹就很烦了。
-尤其是需要写 \`\`\` 代码块，因为这个 \` 符号有冲突，需要写成 \\\`\\\`\\\` 这样，
-很难接受，幸好现在用的场合少。这个问题暂时还没找到妥善的解决办法。
+### URL 属性
+
+如果是直接在 Markdown 组件中写多行的文字，需要用 `{``}` 包裹起来，就像上面那样，
+除此之外，也可以将文字放到单独的 `md` 文件中，然后通过 `url` 属性引用，像下面这样：
+
+```jsx
+import Markdown from '~/comp/markdown';
+import md from './index.md';
+
+function X() {
+  return (
+    <Markdown url={md} />
+  )
+}
+```
+
+`index.md` 只包含 Markdown 文本，像下面这样：
+
+```markdown
+# 欢迎...
+
+欢迎使用 ReactGo，前后端分离的基础开发平台，ReactGo 前端采用 React 技术开发，
+后端采用 Go 语言开发。
+
+ReactGo 提供许多开箱即用的基础功能，用于快速交付业务系统，这也是 ReactGo 的主要目标。
+
+---
+
+想了解更多？请在 [这里](https://reactgo.kross.work) 查看开发文档。
+```
+
+通过 `url` 只能引用 `import` 的静态文件，如果内容来自于网络响应数据，
+那不能使用 `url`。
+
+:::tip import markdown
+前面 `import md from './index.md';` 语句，实际上只是得到了一个指向 `index.md`
+的 url，而不是实际的字符串，你可以打印 `md` 的值出来看看。
+
+得到 url 之后，需要再发送一个 HTTP 请求才能获取真正的内容，所以背后执行了类似下面的语句：
+
+```jsx
+fetch(md)
+```
+
+因此，用 url 不仅仅可以指定 `import` 的 url，也可以指定所有可以公开访问的 url。
+:::
