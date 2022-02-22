@@ -1,41 +1,44 @@
-# Website
+# ReactGO 文档
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+在线查看：https://reactgo.kross.work
 
-### Installation
+使用 [Docusaurus 2](https://docusaurus.io/)。
+
+### 安装
 
 ```
 $ yarn
 ```
 
-### Local Development
+### 本地开发
 
 ```
 $ yarn start
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+此命令启动本地开发服务器，自动打开浏览器窗口，自动刷新。
 
-### Build
+### 构建
 
 ```
 $ yarn build
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+此命令生成静态内容到 `build` 目录，可以用在任何的 WEB 服务器。
 
-### Deployment
+### 部署
 
-Using SSH:
+用 SSH:
 
 ```
 $ USE_SSH=true yarn deploy
 ```
 
-Not using SSH:
+不用 SSH:
 
 ```
 $ GIT_USER=<Your GitHub username> yarn deploy
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+如果你用 GitHub pages 作为主机，这个命令是一个方便的方法来构建内容，并发布到
+`gh-pages` 分支。
