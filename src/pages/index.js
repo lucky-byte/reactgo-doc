@@ -7,11 +7,12 @@ import styles from './index.module.css';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
+
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <div class='row'>
-          <div class="col col--5">
+        <div className='row'>
+          <div className="col col--5">
             <h1 className="hero__title">{siteConfig.title}</h1>
             <p className="hero__subtitle">{siteConfig.tagline}</p>
             <div className={styles.buttons}>
@@ -32,8 +33,8 @@ function HomepageHeader() {
               给一个 Star &#127775;
             </p>
           </div>
-          <div class="col col--7">
-            <img src='/img/ReactGo.jpg' />
+          <div className="col col--7">
+            <img src='/img/ReactGo-dark.png' />
           </div>
         </div>
       </div>
@@ -44,9 +45,7 @@ function HomepageHeader() {
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout
-      title={`${siteConfig.title}`}
-      description="ReactGo 文档">
+    <Layout title={`${siteConfig.title}`} description="ReactGo 文档">
       <HomepageHeader />
       <main>
       </main>

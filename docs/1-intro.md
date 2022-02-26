@@ -34,6 +34,8 @@ ReactGO 支持 `Sqlite`, `MySQL`, 以及 `PostgreSQL`。
 会在浏览器打开登录页面。
 一共要运行 3 个命令。
 
+![ReactGO](/img/ReactGo-light.png)
+
 ### 启动后端
 
 运行 `make` ，完了运行 `./reactgo -adduser -config ./config.yaml`，
