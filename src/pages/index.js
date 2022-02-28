@@ -38,6 +38,13 @@ function HomepageHeader() {
               </Link>
               给一个 Star &#127775;
             </p>
+            <p style={{color: '#bbb', fontSize:'small'}}>
+              文档错误及建议请在
+              <Link href='https://github.com/lucky-byte/reactgo-doc' target='_blank'>
+                文档仓库
+              </Link>
+              中提交 Issues.
+            </p>
           </div>
           <div className="col col--7">
             <img src='/img/ReactGo-dark.png' />
