@@ -13,7 +13,7 @@ function HomepageHeader() {
           <div className="col col--5">
             <h1 className={clsx("hero__title", styles.title)}>REACT + GO</h1>
             <img className={styles.logo} alt='React'
-              src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png'
+              src='https://cdn.worldvectorlogo.com/logos/react-2.svg'
             />
             <img className={styles.logo} alt='Go'
               src='https://ucarecdn.com/157c4486-7979-4103-a59b-8be08b54a84a/'
@@ -28,7 +28,7 @@ function HomepageHeader() {
               </Link>
               <Link className="button button--info button--lg margin-left--sm"
                 href="https://reactgo-demo.kross.work" target='_blank'>
-                演示
+                演示(WIP)
               </Link>
             </div>
             <p className={clsx('margin-top--xl', styles.secondary)}>
