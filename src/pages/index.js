@@ -22,13 +22,16 @@ function HomepageHeader() {
               快速交付你的下一个优质项目
             </p>
             <div className={styles.buttons}>
-              <Link className="button button--secondary button--lg"
+              <Link className="button button--info button--lg"
                 to="/docs/intro">
                 快速上手
               </Link>
-              <Link className="button button--info button--lg margin-left--sm"
-                href="https://reactgo-demo.kross.work" target='_blank'>
-                演示(WIP)
+              <Link className="button button--secondary button--lg margin-left--sm"
+                href="http://reactgo.lucky-byte.net:23890" target='_blank'>
+                演示
+                <span style={{ fontSize: 'small', marginLeft: 10 }}>
+                  账号密码 <span style={{ color: 'orangered' }}>reactgo</span>
+                </span>
               </Link>
             </div>
             <p className={clsx('margin-top--xl', styles.secondary)}>
