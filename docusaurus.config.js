@@ -37,14 +37,19 @@ const config = {
 
   themeConfig: ({
     navbar: {
-      title: 'ReactGo',
+      title: 'ReactGO',
       logo: { alt: 'Logo', src: 'img/logo.png' },
       items: [
         { type: 'doc', docId: 'intro', position: 'left', label: '快速上手', },
         { to: '/blog', label: '博客', position: 'left' },
         {
           href: 'https://github.com/lucky-byte/reactgo',
-          label: 'GitHub',
+          label: 'GITHUB',
+          position: 'right',
+        },
+        {
+          href: 'https://gitee.com/lucky-byte/reactgo',
+          label: 'GITEE',
           position: 'right',
         },
       ],
