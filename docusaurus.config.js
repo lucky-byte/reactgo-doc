@@ -81,12 +81,12 @@ const config = {
               label: '博客', to: '/blog',
             },
             {
-              label: 'GitHub', href: 'https://github.com/lucky-byte/reactgo',
+              label: 'GITHUB', href: 'https://github.com/lucky-byte/reactgo',
             },
           ],
         },
       ],
-      copyright: `版权所有 &copy; ${new Date().getFullYear()} ReactGo 项目.`,
+      copyright: `版权所有 &copy; ${new Date().getFullYear()} ReactGO 项目.`,
     },
     prism: {
       theme: lightCodeTheme,
