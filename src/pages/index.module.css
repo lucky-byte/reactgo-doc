@@ -13,6 +13,12 @@
   background: radial-gradient(circle farthest-corner at center center, #B8E1FC 0%, #231421 100%);
 }
 
+@media screen and (max-width: 966px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
 .title {
   background: #FFFF00;
   background: -webkit-linear-gradient(to left, #FFFF00 0%, #05C1FF 50%, #FFFF00 100%);
@@ -38,10 +44,10 @@
   margin-left: 10px;
 }
 
-@media screen and (max-width: 966px) {
-  .heroBanner {
-    padding: 2rem;
-}
+.ukr {
+  height: 64px;
+  margin-top: 20px;
+  margin-right: 10px;
 }
 
 .buttons {

@@ -34,6 +34,15 @@ function HomepageHeader() {
                 </span>
               </Link>
             </div>
+
+            <img className={styles.ukr} alt='UKR'
+              src='http://spectrum.itrealms.com/wp-content/uploads/2014/07/stop_war_in_ukraine.jpg'
+            />
+            <img className={styles.ukr} alt='UKR' src='/img/ukr.png' />
+            <a href='https://www.youtube.com/watch?v=zV_MiQrqrlk' target='_blank'>
+              <img className={styles.ukr} alt='UKR' src='/img/ukr.jpg' />
+            </a>
+
             <p className={clsx('margin-top--xl', styles.secondary)}>
               如果你觉得 ReactGO 还不错，请到
               <Link href='https://github.com/lucky-byte/reactgo' target='_blank'>
