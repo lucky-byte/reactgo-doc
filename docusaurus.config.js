@@ -63,6 +63,9 @@ const config = {
             {
               label: '快速上手', to: '/docs/intro',
             },
+            {
+              label: '博客', to: '/blog',
+            },
           ],
         },
         {
@@ -78,10 +81,10 @@ const config = {
           title: '更多',
           items: [
             {
-              label: '博客', to: '/blog',
+              label: 'GITHUB', href: 'https://github.com/lucky-byte/reactgo',
             },
             {
-              label: 'GITHUB', href: 'https://github.com/lucky-byte/reactgo',
+              label: 'GITEE', href: 'https://gitee.com/lucky-byte/reactgo',
             },
           ],
         },
