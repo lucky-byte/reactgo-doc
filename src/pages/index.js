@@ -26,7 +26,8 @@ function HomepageHeader() {
                 to="/docs/intro">
                 快速上手
               </Link>
-              <Link className="button button--secondary button--lg margin-left--sm"
+              <div className='margin--sm' />
+              <Link className="button button--secondary button--lg"
                 href="http://reactgo.lucky-byte.net:23890" target='_blank'>
                 演示
                 <span style={{ fontSize: 'small', marginLeft: 10 }}>

@@ -56,6 +56,13 @@
   align-items: center;
 }
 
+@media screen and (max-width: 400px) {
+  .buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
 p.secondary {
   color: #ff0;
   font-size: 0.9rem;
